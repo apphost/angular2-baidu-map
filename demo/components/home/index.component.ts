@@ -30,7 +30,7 @@ import { BMapInstance, MapOptions, Point } from '../../../src'
   template: `
     <h1 class="page-title">angular2-baidu-map</h1>
     <baidu-map [options]="opts" (loaded)="onMapLoad($event)">
-        <marker [point]="point" (clicked)="onClickMarker($event)"></marker>
+        <marker [point]="point" (mouseover)="onMouseover($event)" (clicked)="onClickMarker($event)"></marker>
     </baidu-map>
     <github class="section"></github>
     <div class="home-desc">
@@ -69,5 +69,9 @@ export class HomeComponent {
 
   public onClickMap(e: any) {
     console.log('map e', e)
+  }
+
+  public onMouseover(e: any) {
+    console.log('mouseover=>', e);
   }
 }

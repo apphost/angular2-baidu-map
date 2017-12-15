@@ -31,10 +31,11 @@ export class MarkerComponent implements OnInit, OnChanges, OnDestroy {
 
   @Output() private loaded = new EventEmitter()
   @Output() private clicked = new EventEmitter()
+  @Output() private mouseover = new EventEmitter()
 
   private marker: BMarker
 
-  constructor(private _service: MapService) {}
+  constructor(private _service: MapService) { }
 
   public ngOnInit() {
     nullCheck(this.point, 'point is required for <marker>')
@@ -113,6 +114,11 @@ export class MarkerComponent implements OnInit, OnChanges, OnDestroy {
         map,
         marker
       })
-    })
+    });
+    marker.addEventListener('mouseover', (e: any) => {
+      this.mouseover.emit({
+        e, map, marker
+      });
+    });
   }
 }
