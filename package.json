@@ -1,16 +1,14 @@
 {
-  "name": "angular2-baidu-map",
-  "version": "4.1.0",
+  "name": "ng2-baidu-map",
+  "version": "0.0.1",
   "description": "Angular2 component for Baidu map",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "start": "ng serve --aot",
     "lint": "ng lint",
-    "build":
-      "ng build --prod -bh /angular2-baidu-map/ -d /angular2-baidu-map/ -vc",
-    "deployDemo":
-      "npm run build && git checkout gh-pages && rm -rf *.* assets && mv demodist/* .",
+    "build": "ng build --prod -bh /angular2-baidu-map/ -d /angular2-baidu-map/ -vc",
+    "deployDemo": "npm run build && git checkout gh-pages && rm -rf *.* assets && mv demodist/* .",
     "dist": "rm -rf dist && ngc -p tsconfig.json"
   },
   "files": [
@@ -26,7 +24,7 @@
     "map"
   ],
   "author": "Howard.Zuo",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/leftstick/angular2-baidu-map/issues"
   },
