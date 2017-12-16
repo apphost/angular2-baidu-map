@@ -1,7 +1,7 @@
 {
-  "name": "ng2-baidu-map",
+  "name": "ngx-baidu-map",
   "version": "0.0.1",
-  "description": "Angular2 component for Baidu map",
+  "description": "Angular X component for Baidu map",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
