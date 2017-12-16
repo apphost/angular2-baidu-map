@@ -8,4 +8,3 @@ npm-debug.log
 #build
 out-tsc/
 demodist
-dist
